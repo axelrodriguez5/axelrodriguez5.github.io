@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Axel David Rodriguez</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Axel <span>Rodriguez</span></a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Inicio</a>
+      <a class="nav-link" href="sobre-mi.html">Sobre mí</a>
+      <a class="nav-link" href="exp-estudios.html">Exp. y estudios</a>
+      <a class="nav-link" href="certificaciones.html">Certificaciones</a>
+      <a class="nav-link" href="proyectos.html">Proyectos</a>
+      <a class="nav-link" href="habilidades.html">Habilidades</a>
+      <a class="nav-link active" href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<main class="fade-in">
+
+  <div class="section">
+    <p class="page-label">Contacto</p>
+    <h1><strong>Ponte en contacto</strong></h1>
+    <p style="margin-top:12px;max-width:480px;">
+      ¿Tienes una propuesta, proyecto o simplemente quieres conectar? Escríbeme por cualquiera de estos canales.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="grid-2" style="align-items:start;">
+
+      <div class="card">
+        <p class="page-label" style="margin-bottom:16px;">Información de contacto</p>
+
+        <div class="contact-row">
+          <span class="contact-key">Ubicación</span>
+          <span class="contact-val">Malgrat de Mar, Barcelona</span>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-key">Email</span>
+          <span class="contact-val">
+            <a href="mailto:tu@email.com">tu@email.com</a>
+          </span>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-key">LinkedIn</span>
+          <span class="contact-val" style="color:var(--text-faint);">Próximamente</span>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-key">GitHub</span>
+          <span class="contact-val" style="color:var(--text-faint);">Próximamente</span>
+        </div>
+
+      </div>
+
+      <div class="card">
+        <p class="page-label" style="margin-bottom:16px;">Envíame un mensaje</p>
+
+        <div style="display:flex;flex-direction:column;gap:12px;">
+
+          <div>
+            <label style="font-size:12.5px;color:var(--text-faint);display:block;margin-bottom:6px;">Nombre</label>
+            <input type="text" placeholder="Tu nombre" style="width:100%;padding:9px 13px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:var(--bg);color:var(--text);outline:none;transition:border-color 0.15s;" onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'" />
+          </div>
+
+          <div>
+            <label style="font-size:12.5px;color:var(--text-faint);display:block;margin-bottom:6px;">Email</label>
+            <input type="email" placeholder="tu@email.com" style="width:100%;padding:9px 13px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:var(--bg);color:var(--text);outline:none;transition:border-color 0.15s;" onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'" />
+          </div>
+
+          <div>
+            <label style="font-size:12.5px;color:var(--text-faint);display:block;margin-bottom:6px;">Mensaje</label>
+            <textarea placeholder="¿En qué puedo ayudarte?" rows="4" style="width:100%;padding:9px 13px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:var(--bg);color:var(--text);outline:none;resize:vertical;transition:border-color 0.15s;" onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+          </div>
+
+          <button onclick="handleSend()" style="padding:10px 20px;background:var(--text);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:500;font-family:inherit;cursor:pointer;transition:opacity 0.15s;align-self:flex-start;" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+            Enviar mensaje
+          </button>
+
+          <p id="form-msg" style="font-size:13px;color:var(--text-faint);display:none;"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 Axel David Rodriguez · Malgrat de Mar, Barcelona
+</footer>
+
+<script>
+function handleSend() {
+  const msg = document.getElementById('form-msg');
+  msg.style.display = 'block';
+  msg.textContent = 'Nota: este formulario es de muestra. Conecta un servicio como Formspree o EmailJS para recibir mensajes reales.';
+}
+</script>
+
+</body>
+</html>

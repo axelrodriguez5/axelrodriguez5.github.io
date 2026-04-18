@@ -1,216 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Axel David Rodriguez — Administrador de Sistemas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-.site { font-family: var(--font-sans); max-width: 860px; margin: 0 auto; }
-
-nav {
-  display: flex; align-items: center; gap: 4px;
-  padding: 12px 20px;
-  background: var(--color-background-primary);
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  flex-wrap: wrap;
-}
-
-.brand {
-  font-size: 15px; font-weight: 500;
-  color: var(--color-text-primary);
-  margin-right: 16px; text-decoration: none;
-  flex-shrink: 0;
-}
-
-.nav-link {
-  padding: 6px 14px;
-  border-radius: var(--border-radius-md);
-  font-size: 14px;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-  border: 0.5px solid transparent;
-  background: none;
-  font-family: var(--font-sans);
-  transition: all 0.12s;
-}
-
-.nav-link:hover { background: var(--color-background-secondary); color: var(--color-text-primary); }
-
-.nav-link.active {
-  background: var(--color-background-secondary);
-  color: var(--color-text-primary);
-  border-color: var(--color-border-secondary);
-  font-weight: 500;
-}
-
-.content {
-  margin-top: 24px;
-  padding: 32px 28px;
-  background: var(--color-background-primary);
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  min-height: 320px;
-}
-
-.avatar {
-  width: 72px; height: 72px; border-radius: 50%;
-  background: var(--color-background-info);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 24px; font-weight: 500;
-  color: var(--color-text-info);
-  margin-bottom: 20px;
-}
-
-h1 { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px; }
-h2 { font-size: 18px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 12px; }
-p { font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 12px; }
-
-.tag {
-  display: inline-block; font-size: 12px;
-  padding: 3px 10px; border-radius: 99px;
-  background: var(--color-background-secondary);
-  color: var(--color-text-secondary);
-  border: 0.5px solid var(--color-border-tertiary);
-  margin: 3px;
-}
-
-.timeline-item {
-  padding: 16px 0;
-  border-bottom: 0.5px solid var(--color-border-tertiary);
-  display: flex; gap: 16px;
-}
-
-.timeline-item:last-child { border-bottom: none; }
-
-.timeline-year {
-  font-size: 12px; color: var(--color-text-tertiary);
-  min-width: 80px; padding-top: 2px;
-}
-
-.timeline-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
-.timeline-sub { font-size: 13px; color: var(--color-text-secondary); }
-
-.contact-row {
-  display: flex; align-items: center; gap: 12px;
-  padding: 12px 0;
-  border-bottom: 0.5px solid var(--color-border-tertiary);
-  font-size: 14px;
-}
-
-.contact-row:last-child { border-bottom: none; }
-.contact-label { color: var(--color-text-secondary); min-width: 80px; font-size: 13px; }
-.contact-val { color: var(--color-text-primary); }
-
-.skill-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-</style>
-
-<div class="site">
-  <nav id="nav">
-    <span class="brand">Tu nombre</span>
-    <button class="nav-link active" onclick="goTo('inicio')">Inicio</button>
-    <button class="nav-link" onclick="goTo('sobre')">Sobre mí</button>
-    <button class="nav-link" onclick="goTo('experiencia')">Experiencia</button>
-    <button class="nav-link" onclick="goTo('estudios')">Estudios</button>
-    <button class="nav-link" onclick="goTo('contacto')">Contacto</button>
-  </nav>
-
-  <div class="content" id="content"></div>
-</div>
-
-<script>
-const pages = {
-  inicio: () => `
-    <div class="avatar">TN</div>
-    <h1>Hola, soy Tu Nombre</h1>
-    <p>Desarrollador / Diseñador / [tu profesión] con sede en Barcelona.</p>
-    <p>Bienvenido a mi web personal. Aquí encontrarás información sobre mi trayectoria, mis proyectos y cómo contactarme.</p>
-    <div class="skill-grid">
-      <span class="tag">Barcelona</span>
-      <span class="tag">Disponible para proyectos</span>
-      <span class="tag">LinkedIn</span>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Axel <span>Rodriguez</span></a>
+    <div class="nav-links">
+      <a class="nav-link active" href="index.html">Inicio</a>
+      <a class="nav-link" href="sobre-mi.html">Sobre mí</a>
+      <a class="nav-link" href="exp-estudios.html">Exp. y estudios</a>
+      <a class="nav-link" href="certificaciones.html">Certificaciones</a>
+      <a class="nav-link" href="proyectos.html">Proyectos</a>
+      <a class="nav-link" href="habilidades.html">Habilidades</a>
+      <a class="nav-link" href="contacto.html">Contacto</a>
     </div>
-  `,
-  sobre: () => `
-    <h2>Sobre mí</h2>
-    <p>Soy una persona apasionada por [tu campo]. Llevo X años trabajando en [sector] y me especializo en [especialidad].</p>
-    <p>Fuera del trabajo me gusta [aficiones]. Creo en [valores profesionales o personales].</p>
-    <p style="margin-top:20px;font-size:13px;font-weight:500;color:var(--color-text-primary)">Habilidades</p>
-    <div class="skill-grid" style="margin-top:8px">
-      <span class="tag">HTML / CSS</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">Diseño UX</span>
-      <span class="tag">Trabajo en equipo</span>
-      <span class="tag">Gestión de proyectos</span>
-    </div>
-  `,
-  experiencia: () => `
-    <h2>Experiencia</h2>
-    <div class="timeline-item">
-      <div class="timeline-year">2022 – hoy</div>
-      <div>
-        <div class="timeline-title">Desarrollador Frontend — Empresa S.L.</div>
-        <div class="timeline-sub">Descripción breve de tus responsabilidades y logros principales.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-year">2019 – 2022</div>
-      <div>
-        <div class="timeline-title">Diseñador UX — Agencia Creativa</div>
-        <div class="timeline-sub">Diseño de interfaces para clientes del sector retail y fintech.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-year">2017 – 2019</div>
-      <div>
-        <div class="timeline-title">Prácticas — Startup Tecnológica</div>
-        <div class="timeline-sub">Primer contacto profesional, desarrollo de productos digitales.</div>
-      </div>
-    </div>
-  `,
-  estudios: () => `
-    <h2>Estudios</h2>
-    <div class="timeline-item">
-      <div class="timeline-year">2015 – 2019</div>
-      <div>
-        <div class="timeline-title">Grado en Ingeniería Informática</div>
-        <div class="timeline-sub">Universitat Politècnica de Catalunya (UPC)</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-year">2020</div>
-      <div>
-        <div class="timeline-title">Máster en Diseño UX/UI</div>
-        <div class="timeline-sub">ELISAVA Escola Superior de Disseny</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-year">2023</div>
-      <div>
-        <div class="timeline-title">Certificación en Accesibilidad Web (WCAG)</div>
-        <div class="timeline-sub">Formación online — W3C</div>
-      </div>
-    </div>
-  `,
-  contacto: () => `
-    <h2>Contacto</h2>
-    <p>¿Tienes un proyecto en mente o quieres ponerte en contacto? Escríbeme.</p>
-    <div style="margin-top:20px">
-      <div class="contact-row"><span class="contact-label">Email</span><span class="contact-val">tu@email.com</span></div>
-      <div class="contact-row"><span class="contact-label">LinkedIn</span><span class="contact-val">linkedin.com/in/tunombre</span></div>
-      <div class="contact-row"><span class="contact-label">GitHub</span><span class="contact-val">github.com/tunombre</span></div>
-      <div class="contact-row"><span class="contact-label">Ubicación</span><span class="contact-val">Barcelona, España</span></div>
-    </div>
-  `
-};
+  </div>
+</nav>
 
-let current = 'inicio';
+<main class="fade-in">
 
-function goTo(page) {
-  current = page;
-  document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
-  const btns = document.querySelectorAll('.nav-link');
-  const map = ['inicio','sobre','experiencia','estudios','contacto'];
-  btns[map.indexOf(page)].classList.add('active');
-  document.getElementById('content').innerHTML = pages[page]();
-}
+  <div class="section" style="padding-top: 24px;">
+    <p class="page-label">Bienvenido</p>
+    <h1>
+      Hola, soy<br>
+      <strong>Axel David Rodriguez</strong>
+    </h1>
+    <p style="margin-top: 20px; max-width: 520px; font-size: 16px;">
+      Administrador de Sistemas Informáticos con sede en Malgrat de Mar, Barcelona.
+      Apasionado por la infraestructura, las redes y la seguridad informática.
+    </p>
 
-goTo('inicio');
-</script>
+    <div style="display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap;">
+      <a href="sobre-mi.html" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--text);color:#fff;border-radius:8px;font-size:14px;font-weight:500;transition:opacity 0.15s;" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+        Sobre mí
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="contacto.html" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:transparent;color:var(--text);border:1px solid var(--border-strong);border-radius:8px;font-size:14px;font-weight:500;transition:background 0.15s;" onmouseover="this.style.background='var(--accent-soft)'" onmouseout="this.style.background='transparent'">
+        Contacto
+      </a>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="section">
+    <div class="grid-2">
+
+      <a href="exp-estudios.html" class="card" style="display:block;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)'" onmouseout="this.style.borderColor='var(--border)'">
+        <p class="page-label" style="margin-bottom:8px;">Experiencia y estudios</p>
+        <h3>Trayectoria profesional y formación académica</h3>
+        <p style="margin-top:8px;font-size:13.5px;">Historial de trabajos, prácticas y titulaciones.</p>
+      </a>
+
+      <a href="habilidades.html" class="card" style="display:block;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)'" onmouseout="this.style.borderColor='var(--border)'">
+        <p class="page-label" style="margin-bottom:8px;">Habilidades</p>
+        <h3>Tecnologías y competencias técnicas</h3>
+        <p style="margin-top:8px;font-size:13.5px;">Sistemas operativos, redes, virtualización y más.</p>
+      </a>
+
+      <a href="proyectos.html" class="card" style="display:block;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)'" onmouseout="this.style.borderColor='var(--border)'">
+        <p class="page-label" style="margin-bottom:8px;">Proyectos</p>
+        <h3>Trabajos y proyectos destacados</h3>
+        <p style="margin-top:8px;font-size:13.5px;">Iniciativas personales y profesionales.</p>
+      </a>
+
+      <a href="certificaciones.html" class="card" style="display:block;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--border-strong)'" onmouseout="this.style.borderColor='var(--border)'">
+        <p class="page-label" style="margin-bottom:8px;">Certificaciones</p>
+        <h3>Formación oficial y certificados obtenidos</h3>
+        <p style="margin-top:8px;font-size:13.5px;">Cursos y acreditaciones profesionales.</p>
+      </a>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 Axel David Rodriguez · Malgrat de Mar, Barcelona
+</footer>
+
+</body>
+</html>
