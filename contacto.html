@@ -47,7 +47,7 @@
         <div class="contact-row">
           <span class="contact-key">Email</span>
           <span class="contact-val">
-            <a href="mailto:tu@email.com">tu@email.com</a>
+            <a href="mailto:tu@email.com">rodriguezz.axell05@gmail.com</a>
           </span>
         </div>
 
@@ -63,34 +63,6 @@
 
       </div>
 
-      <div class="card">
-        <p class="page-label" style="margin-bottom:16px;">Envíame un mensaje</p>
-
-        <div style="display:flex;flex-direction:column;gap:12px;">
-
-          <div>
-            <label style="font-size:12.5px;color:var(--text-faint);display:block;margin-bottom:6px;">Nombre</label>
-            <input type="text" placeholder="Tu nombre" style="width:100%;padding:9px 13px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:var(--bg);color:var(--text);outline:none;transition:border-color 0.15s;" onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'" />
-          </div>
-
-          <div>
-            <label style="font-size:12.5px;color:var(--text-faint);display:block;margin-bottom:6px;">Email</label>
-            <input type="email" placeholder="tu@email.com" style="width:100%;padding:9px 13px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:var(--bg);color:var(--text);outline:none;transition:border-color 0.15s;" onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'" />
-          </div>
-
-          <div>
-            <label style="font-size:12.5px;color:var(--text-faint);display:block;margin-bottom:6px;">Mensaje</label>
-            <textarea placeholder="¿En qué puedo ayudarte?" rows="4" style="width:100%;padding:9px 13px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:var(--bg);color:var(--text);outline:none;resize:vertical;transition:border-color 0.15s;" onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'"></textarea>
-          </div>
-
-          <button onclick="handleSend()" style="padding:10px 20px;background:var(--text);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:500;font-family:inherit;cursor:pointer;transition:opacity 0.15s;align-self:flex-start;" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
-            Enviar mensaje
-          </button>
-
-          <p id="form-msg" style="font-size:13px;color:var(--text-faint);display:none;"></p>
-        </div>
-      </div>
-
     </div>
   </div>
 
@@ -99,14 +71,6 @@
 <footer>
   © 2025 Axel David Rodriguez · Malgrat de Mar, Barcelona
 </footer>
-
-<script>
-function handleSend() {
-  const msg = document.getElementById('form-msg');
-  msg.style.display = 'block';
-  msg.textContent = 'Nota: este formulario es de muestra. Conecta un servicio como Formspree o EmailJS para recibir mensajes reales.';
-}
-</script>
 
 </body>
 </html>
